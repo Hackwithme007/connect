@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect | Hackwithme007</title>
+</head>
+<style>
+    @keyframes image {
+        0%{
+            transform: rotate(360deg);
+            width: 0;
+        }100%{
+            transform: rotate(0deg);
+            width: 30%;
+        }
+    }
+    @keyframes loading {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+        99% {
+            top: 0px;
+            left: 0px;
+        }
+        100% {
+            top: -50000px;
+            left: -50000px;
+        }
+    }
+    body {
+        background: #000;
+        background-image: url('https://cdn.pixabay.com/photo/2021/05/30/21/48/background-6297148_1280.jpg');
+        background-size: cover;
+        color: #0f0;
+        height: 720px;
+        width: 100%;
+        overflow: hidden;
+        font-family: Calibri, sans-serif;
+    }
+    nav {
+        background: black;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        place-items: center;
+    }
+    ul {
+        height: 30px;
+        width: 100%;
+        background: black;
+        display: flex;
+        place-items: center;
+    }
+    a, b, p, i, h1, h2, h3, h4, h5, h6 {
+        margin: 3px;
+        color: white;
+        border: none;
+    }
+    #loading {
+        background-image: linear-gradient(to right, #0f0, #004d00);
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+    #main {
+        position: absolute;
+        top: 53px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: auto;
+        padding: 20px;
+        display: grid;
+        place-items: center;
+    }
+    #loader {
+        position: absolute;
+        top: -50000px;
+        left: -50000px;
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        animation: 3s loading;
+    }
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    #spinner {
+        background-image: linear-gradient(to right, green, cyan);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        animation: 1.5s spin infinite;
+    }
+    @keyframes anticlock {
+        0% {
+            transform: rotate(360deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+    /* Writing Animation */
+    @keyframes write {
+        from { width: 0; }
+    }
+    .animated-text {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: write 1s steps(50, end) forwards;
+    }::-webkit-scrollbar{
+        background: rgb(45, 45, 45);
+        height: 5px;
+        width: 3px;
+    }::-webkit-scrollbar-thumb{
+        background: #0f0;
+    }::-webkit-scrollbar-thumb:hover{
+        background: #006000;
+    }button{
+        background: none;
+        color: white;
+        border: none;
+        margin: 3px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <nav>
+        <ul id="ul">
+            <h1>Hackwithme007</h1>
+            <button onclick="about()">About</button>
+            <button onclick="services()">Services</button>
+            <button onclick="contact()">Contact</button>
+        </ul>
+    </nav>
+    <div id="loading"></div>
+    <div id="main">
+        <img src="https://avatars.githubusercontent.com/u/147087348?v=4" alt="" width="30%" style="border-radius: 50%; animation: 1.5s image;">
+        <h1>Ethical Hacker Profile</h1>
+        <h3>Introduction</h3>
+        <p class="animated-text">Welcome to my GitHub profile!</p>
+        <p>I'm an ethical hacker passionate about cybersecurity and ensuring digital environments are secure for everyone.</p> 
+        <p>My mission is to utilize my skills and knowledge to identify vulnerabilities, strengthen security measures, and contribute to creating a safer digital world.</p>
+        <br>
+        <h3>About Me</h3>
+        <li>Experience: I have a few years of experience in the field of cybersecurity and ethical hacking.</li>
+        <li>Skills: coding skills, penetration testing, vulnerability assessment, network security, etc.</li>
+        <br>
+        <h3>Ethical Hacking Principles</h3>
+        <p>As an ethical hacker, I adhere to the following principles:</p>
+        <br>
+        <li>Legal Compliance: I operate within the bounds of the law and adhere to ethical guidelines and industry standards.</li>
+        <li>Responsible Disclosure: I believe in responsible disclosure of vulnerabilities to vendors and organizations to ensure timely mitigation and protection of users.</li>
+        <li>Continuous Learning: Cybersecurity is an ever-evolving field, and I am committed to staying updated with the latest trends, techniques, and best practices.</li>
+        <li>Community Engagement: I actively engage with the cybersecurity community, share knowledge, and contribute to open-source projects aimed at improving security.</li>
+        <br>
+        <h3>Outline the services you offer as an ethical hacker, such as:</h3>
+        <li>Penetration Testing: Assessing the security posture of systems, networks, and applications to identify and mitigate vulnerabilities.</li>
+        <li>Security Audits: Conducting comprehensive security audits to identify weaknesses and recommend remediation measures.</li>
+        <li>Training and Consultation: Providing training sessions and consultations on cybersecurity best practices, threat mitigation, and incident response.</li>
+        <br>
+        <h3>Let's Connect!</h3>
+        <p>I'm passionate about cybersecurity and always open to connecting with like-minded professionals. Let's collaborate, share knowledge, and work together to make the digital world safer for everyone.</p>
+    </div>
+    <div id="loader">
+        <div id="spinner">
+            <div style="display: grid; place-items: center; background: black; width: 147px; height: 147px; border-radius: 50%; animation: 1.5s anticlock infinite;">
+                <h3>Loading...</h3>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function about(){
+        window.open('https://github.com/Hackwithme007/Hackwithme007/blob/main/README.md', '_blank');
+    }function services(){
+        window.open('https://github.com/Hackwithme007', '_blank');
+    }
+    function contact(){
+        alert('Feel free to reach out to me for collaboration opportunities, consultations, or any inquiries related to cybersecurity')
+        window.open('mailto:genuine.hack007@yahoo.com', '_blank');
+    }
+    const texts = document.querySelectorAll('.animated-text');
+    texts.forEach((text) => {
+        const originalText = text.innerHTML;
+        text.innerHTML = ''; // Clear the content
+        let index = 0;
+        const interval = setInterval(() => {
+            text.innerHTML += originalText[index];
+            index++;
+            if (index === originalText.length) clearInterval(interval);
+        }, 25); // Adjust speed here
+    });
+    if (window.innerWidth<370){
+        document.getElementById('ul').innerHTML=`
+            <h1>Hackwithme007</h1>
+        `;
+    }
+</script>
+</html>
